@@ -95,6 +95,7 @@
       <br /><br /><br />
       <button onclick='calculateCompatibility()'>Calculate Compatibility</button>
       <p id='compatibility'></p>
+      <p id='message'></p>
 
 <script>
 console.log('Starting Matchmaker for the Web...')
@@ -165,8 +166,17 @@ function calculateCompatibility() {
     console.log('TotalCompatibility =' + totalCompatibility);
 
 
-    document.getElementById('compatibility').innerHTML = 'Our compatability is:' +totalCompatibility;
-}
+    document.getElementById('compatibility').innerHTML = 'Our compatability is: ' +totalCompatibility;
+
+    // Compatibility Range Remarks
+    if (totalCompatibility < 50){
+      document.getElementById('message').innerHTML = 'Ahh well thats awkward.. ';
+    } else if (totalCompatibility < 70) {
+      document.getElementById('message').innerHTML = 'Maybe we can still be friends?';
+    } else {
+      document.getElementById('message').innerHTML = "Let's go get some food together sometime :)";
+    }
+  }
 
 </script>
 
