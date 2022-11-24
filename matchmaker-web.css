@@ -1,12 +1,15 @@
-e
+
 h1 {
     font-size: 50px;
+    word-wrap: break-word
   }
   
   h2 {
     font-size: 40px;
+    word-wrap: break-word
   }
   
   p {
     font-size: 20px;
+    word-wrap: break-word
   }
